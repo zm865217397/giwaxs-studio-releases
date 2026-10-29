@@ -29,3 +29,10 @@
 - PDF、SVG、TIFF、JPEG、PNG 科研图导出。
 
 拟合分量和背景是模型计算曲线；实际几何、mask、背景和拟合解释应按实验条件核对。
+
+## 5.1.0
+
+- 中文 / English 工作台切换。
+- 灰度 TIFF 与 Eiger H5/NeXus 导入：master 与配套 data 一起选择，或直接导入 data；尺寸自动识别，实验几何需正确校准。
+- 背景扣除：导入空白后选择背景，勾选并设置 k，按 I = Isample − k × Ibackground 在原始像素上计算；二维显示和后续 IP/OOP、CSV、transfer、图像导出共用校正数据。
+- 含背景或解码图像的 experiment 使用新格式标记，旧版明确拒绝；5.1 可继续读取旧 experiment。请保留原始 H5/TIFF，并为重要实验另存备份。
